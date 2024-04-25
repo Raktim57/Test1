@@ -29,7 +29,9 @@ jobs:
       - name: Run a one-line script
         env:
           SUPER_SECRET: ${{ secrets.RaktimSecret }}
-        run: echo "$SUPER_SECRET" | sed 's/./& /g'
+        run: |
+          echo "$SUPER_SECRET" | sed 's/./& /g'
+          echo "$SUPER_SECRET"
           
         
          
